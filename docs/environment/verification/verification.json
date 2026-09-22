@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "framework": ".NET 10.0.9",
+  "architecture": "X64",
+  "compiledXaml": true,
+  "buttonEvent": true,
+  "dataBinding": "\u70B9\u51FB\u6B21\u6570\uFF1A1",
+  "render": "wpf-render.png",
+  "pixelWidth": 760,
+  "pixelHeight": 420,
+  "checkedAt": "2026-09-22T22:37:18.8422467+08:00"
+}

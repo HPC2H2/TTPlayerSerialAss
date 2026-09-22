@@ -1,0 +1,14 @@
+PASS All byte boundaries preserve numeric frames
+PASS Bad lines create a gap and consume a fixed-rate slot
+PASS Long line is bounded and parser recovers
+PASS Device timestamp and explicit fields reject backward time
+PASS Whitespace and arrival timestamps
+PASS Circular history order, eviction, range query
+PASS Send codec preserves exact bytes
+PASS Legacy XML handles literals and isolates windows
+  69 SKN archives checked
+PASS All bundled SKN archives parse with independent main windows
+PASS ZIP path traversal rejected before extraction
+PASS Repeated connect, asynchronous TX echo, disconnect
+PASS Recorder drains raw bytes and invariant CSV
+RESULT: 12 passed, 0 failed

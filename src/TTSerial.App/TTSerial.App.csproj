@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF>
+    <AssemblyName>TTPlayerSerialAss</AssemblyName><RootNamespace>TTSerial.App</RootNamespace>
+    <Version>0.1.0</Version><ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../TTSerial.Core/TTSerial.Core.csproj" /><ProjectReference Include="../TTSerial.IO/TTSerial.IO.csproj" /></ItemGroup>
+  <ItemGroup><Content Include="../../resources/skins/*.skn" Link="Skins/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../resources/skins/1、经典皮肤 (淡蓝+黑绿).skn" LogicalName="TTSerial.Default.skn" /></ItemGroup>
+</Project>

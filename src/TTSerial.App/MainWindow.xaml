@@ -1,0 +1,69 @@
+<Window x:Class="TTSerial.App.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:TTSerial.App"
+        Style="{StaticResource {x:Type Window}}" Title="千千串口助手" Width="1140" Height="780" MinWidth="900" MinHeight="700" WindowStartupLocation="CenterScreen" AllowDrop="True" Drop="OnDrop">
+  <Grid x:Name="RootGrid" Margin="16,10,16,8">
+    <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+    <DockPanel Margin="0,0,0,12">
+      <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center"><TextBlock Text="千千串口助手" FontSize="20" FontWeight="SemiBold" /><TextBlock Text="SERIAL · SCOPE" Margin="12,6,0,0" FontSize="11" Opacity="0.65" /></StackPanel>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"><Button Content="窗口" Click="WindowsMenu" /><TextBlock Text="皮肤" Margin="8,0,8,0" VerticalAlignment="Center" /><ComboBox x:Name="SkinSelector" Width="175" DisplayMemberPath="Name" SelectionChanged="SkinSelected" /><Button Content="导入 .skn" Margin="8,0,0,0" Click="ImportSkin" /></StackPanel>
+    </DockPanel>
+    <Grid Grid.Row="1" x:Name="WorkspaceGrid">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="0.88*" MinWidth="350" /><ColumnDefinition Width="14" /><ColumnDefinition Width="1.2*" MinWidth="460" /></Grid.ColumnDefinitions>
+      <Grid x:Name="LeftGrid">
+        <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="*" /></Grid.RowDefinitions>
+        <local:SkinPlayer x:Name="Player" MaxHeight="220" HorizontalAlignment="Center" Margin="0,0,0,10" />
+        <StackPanel Grid.Row="1" Margin="0,0,0,12">
+          <WrapPanel><Button x:Name="MonitorButton" Content="开始监视" Click="MonitorClick" /><Button x:Name="DisconnectButton" Content="断开" Click="DisconnectClick" /><Button Content="串口设置" Click="OpenSettings" /><Button x:Name="DemoButton" Content="演示" Click="StartDemo" /></WrapPanel>
+          <TextBlock x:Name="ConnectionSummary" Text="尚未连接" Margin="2,6,0,0" FontSize="12" TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+        <ContentControl x:Name="TerminalHost" Grid.Row="2">
+          <Border x:Name="TerminalPanel" Style="{StaticResource PanelFrame}">
+            <DockPanel>
+              <DockPanel DockPanel.Dock="Top" Margin="5,0,1,6"><Button DockPanel.Dock="Right" Content="↗" ToolTip="浮动收发窗口" Click="FloatTerminal" Padding="5,0" MinHeight="23" /><TextBlock Text="串口收发" VerticalAlignment="Center" /></DockPanel>
+              <Border Style="{StaticResource PanelBody}"><Grid>
+                <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                <DockPanel Margin="0,0,0,6" TextElement.Foreground="{DynamicResource Ink}"><CheckBox x:Name="HexReceive" Content="HEX" Checked="RefreshLog" Unchecked="RefreshLog" /><CheckBox x:Name="TimeStampCheck" Content="时间戳" IsChecked="True" Checked="RefreshLog" Unchecked="RefreshLog" /><Button Content="清屏" Click="ClearLog" Padding="6,1" MinHeight="23" /><Button Content="保存日志" Click="SaveWireLog" Padding="6,1" MinHeight="23" /><TextBlock x:Name="CounterLabel" HorizontalAlignment="Right" FontSize="11" VerticalAlignment="Center" /></DockPanel>
+                <TextBox Grid.Row="1" x:Name="ReceiveLog" IsReadOnly="True" FontFamily="Consolas,Microsoft YaHei UI" FontSize="12" TextWrapping="NoWrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" MinHeight="70" BorderThickness="0" Padding="0" Background="Transparent" Foreground="{DynamicResource Accent}" />
+                <DockPanel Grid.Row="2" Margin="0,10,0,6"><ComboBox x:Name="PresetSelector" DisplayMemberPath="Name" SelectionChanged="PresetSelected" MinWidth="90" /><Button Content="保存预设" Click="SavePreset" Margin="6,0,0,0" /></DockPanel>
+                <TextBox Grid.Row="3" x:Name="SendText" AcceptsReturn="True" MinHeight="48" MaxHeight="80" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontFamily="Consolas" ToolTip="Ctrl+Enter 发送" />
+                <StackPanel Grid.Row="4" Margin="0,7,0,0" TextElement.Foreground="{DynamicResource Ink}">
+                  <WrapPanel><CheckBox x:Name="HexSend" Content="HEX" /><ComboBox x:Name="NewlineSelector" Width="80" SelectedIndex="1"><ComboBoxItem Content="无换行" /><ComboBoxItem Content="CRLF" /><ComboBoxItem Content="LF" /><ComboBoxItem Content="CR" /></ComboBox><Button x:Name="SendButton" Content="发送" Click="SendClick" Margin="6,0,0,0" /></WrapPanel>
+                  <WrapPanel Margin="0,6,0,0"><CheckBox x:Name="PeriodicSend" Content="周期发送" Checked="PeriodicChanged" Unchecked="PeriodicChanged" /><TextBox x:Name="IntervalText" Text="1000" Width="64" /><TextBlock Text="ms" Margin="5,0,10,0" VerticalAlignment="Center" /><TextBlock Text="Ctrl+Enter 发送" FontSize="11" Opacity="0.7" VerticalAlignment="Center" /></WrapPanel>
+                </StackPanel>
+              </Grid></Border>
+            </DockPanel>
+          </Border>
+        </ContentControl>
+      </Grid>
+      <Grid Grid.Column="2" x:Name="RightGrid">
+        <Grid.RowDefinitions><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+        <ContentControl x:Name="ScopeHost">
+          <Border x:Name="ScopePanel" Style="{StaticResource PanelFrame}">
+            <DockPanel>
+              <DockPanel DockPanel.Dock="Top" Margin="5,0,1,6"><Button DockPanel.Dock="Right" Content="↗" ToolTip="浮动波形窗口" Click="FloatScope" Padding="5,0" MinHeight="23" /><TextBlock Text="数值示波器" VerticalAlignment="Center" /></DockPanel>
+              <Border Style="{StaticResource PanelBody}"><Grid TextElement.Foreground="{DynamicResource Ink}">
+                <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                <WrapPanel><TextBlock x:Name="LiveLabel" Text="OFF" FontWeight="SemiBold" Margin="0,0,12,0" VerticalAlignment="Center" /><TextBlock Text="时间窗" VerticalAlignment="Center" Margin="0,0,5,0" /><ComboBox x:Name="TimeRange" Width="80" IsEditable="True" IsReadOnly="True" SelectedIndex="2" SelectionChanged="TimeRangeChanged"><ComboBoxItem Content="0.1 s" Tag="0.1" /><ComboBoxItem Content="0.5 s" Tag="0.5" /><ComboBoxItem Content="1 s" Tag="1" /><ComboBoxItem Content="2 s" Tag="2" /><ComboBoxItem Content="5 s" Tag="5" /><ComboBoxItem Content="10 s" Tag="10" /><ComboBoxItem Content="30 s" Tag="30" /></ComboBox><Button Content="实时" Click="GoLive" Margin="7,0,0,0" /><TextBlock x:Name="TimeSourceLabel" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="11" /></WrapPanel>
+                <local:WaveformView Grid.Row="1" x:Name="Wave" Margin="0,8,0,4" />
+                <TextBlock Grid.Row="2" x:Name="MeasureLabel" Text="滚轮缩放 · 拖动平移 · 双击回到实时" FontSize="11" TextTrimming="CharacterEllipsis" Margin="0,0,0,5" Foreground="{DynamicResource Muted}" />
+                <DockPanel Grid.Row="3"><TextBlock Text="历史" VerticalAlignment="Center" Margin="0,0,8,0" /><Slider x:Name="HistorySlider" Minimum="0" Maximum="100" Value="100" ValueChanged="HistoryChanged" VerticalAlignment="Center" /></DockPanel>
+                <WrapPanel Grid.Row="4" Margin="0,8,0,0"><Button x:Name="RecordButton" Content="开始录制" Click="RecordClick" /><Button Content="导出 CSV" Click="ExportCsv" /><Button Content="保存图像" Click="SavePlot" /><TextBlock x:Name="SampleLabel" Margin="6,0,0,0" FontSize="11" VerticalAlignment="Center" /></WrapPanel>
+              </Grid></Border>
+            </DockPanel>
+          </Border>
+        </ContentControl>
+        <ContentControl x:Name="ChannelsHost" Grid.Row="1" Margin="0,12,0,0">
+          <Border x:Name="ChannelsPanel" Style="{StaticResource PanelFrame}"><DockPanel>
+            <DockPanel DockPanel.Dock="Top" Margin="5,0,1,6"><Button DockPanel.Dock="Right" Content="↗" ToolTip="浮动通道窗口" Click="FloatChannels" Padding="5,0" MinHeight="23" /><TextBlock Text="通道控制" VerticalAlignment="Center" /></DockPanel>
+            <Border Style="{StaticResource PanelBody}"><StackPanel TextElement.Foreground="{DynamicResource Ink}">
+              <ItemsControl x:Name="ChannelToggles"><ItemsControl.ItemsPanel><ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate></ItemsControl.ItemsPanel><ItemsControl.ItemTemplate><DataTemplate><CheckBox Content="{Binding Label}" IsChecked="{Binding Enabled}" Foreground="{Binding Color}" FontWeight="SemiBold" /></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+              <WrapPanel Margin="0,6,0,6"><CheckBox x:Name="AutoYCheck" Content="自动量程" IsChecked="True" /><TextBox x:Name="YMinimum" Text="0" Width="55" ToolTip="Y 轴最小值" /><TextBlock Text=" 至 " VerticalAlignment="Center" /><TextBox x:Name="YMaximum" Text="3.3" Width="55" ToolTip="Y 轴最大值" /><TextBlock Text="  多通道共用 Y 轴" VerticalAlignment="Center" FontSize="11" Opacity="0.7" /></WrapPanel>
+              <DockPanel><ComboBox x:Name="ChannelSelector" DisplayMemberPath="Label" Width="65" SelectionChanged="ChannelSelected" /><Grid x:Name="ChannelEditor" Margin="8,0,0,0"><Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions><TextBox Text="{Binding Name,UpdateSourceTrigger=LostFocus}" ToolTip="通道名称" Margin="0,0,5,0" /><TextBox Grid.Column="1" Text="{Binding Scale,ValidatesOnExceptions=True}" ToolTip="换算比例：工程量 = 原始值 × 比例 + 偏移" Margin="0,0,5,0" /><TextBox Grid.Column="2" Text="{Binding Offset,ValidatesOnExceptions=True}" ToolTip="偏移" Margin="0,0,5,0" /><TextBox Grid.Column="3" Text="{Binding Unit}" ToolTip="工程单位" /></Grid></DockPanel>
+              <TextBlock Text="名称 / 比例 / 偏移 / 单位 · 按 Enter 或切换焦点应用" FontSize="10" Foreground="{DynamicResource Muted}" Margin="73,4,0,0" />
+            </StackPanel></Border>
+          </DockPanel></Border>
+        </ContentControl>
+      </Grid>
+    </Grid>
+    <DockPanel Grid.Row="2" Margin="0,9,0,0"><TextBlock DockPanel.Dock="Right" Text="拖入 .skn 换肤" FontSize="11" Opacity="0.65" /><TextBlock x:Name="StatusText" FontSize="12" Text="就绪。可选择串口，或点击“演示”查看波形。" TextTrimming="CharacterEllipsis" /></DockPanel>
+  </Grid>
+</Window>

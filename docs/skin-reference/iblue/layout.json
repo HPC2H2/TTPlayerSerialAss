@@ -1,0 +1,617 @@
+{
+  "source": "E:\\ttplayer-cpp\\【千千静听 Skin】皮肤 ★\\2 简约++\\02、iBlue (淡蓝+黑格).skn",
+  "windows": {
+    "player_window": {
+      "image": "player_skin.bmp",
+      "elements": {
+        "play": {
+          "position": "151, 87, 179, 115",
+          "image": "play.bmp"
+        },
+        "pause": {
+          "position": "151, 87, 179, 115",
+          "image": "pause.bmp"
+        },
+        "stop": {
+          "position": "85, 94, 104, 109",
+          "image": "stop.bmp"
+        },
+        "prev": {
+          "position": "108, 94, 147, 109",
+          "image": "prev.bmp"
+        },
+        "next": {
+          "position": "183, 94, 222, 109",
+          "image": "next.bmp"
+        },
+        "mute": {
+          "position": "226, 93, 247, 112",
+          "image": "mute.bmp"
+        },
+        "open": {
+          "position": "61, 94, 81, 109",
+          "image": "open.bmp"
+        },
+        "lyric": {
+          "position": "21, 99, 28, 106",
+          "image": "lyric.bmp"
+        },
+        "equalizer": {
+          "position": "33, 99, 40, 106",
+          "image": "equalizer.bmp"
+        },
+        "playlist": {
+          "position": "45, 99, 52, 106",
+          "image": "playlist.bmp"
+        },
+        "minimize": {
+          "position": "244, 0, 268, 15",
+          "image": "minimize.bmp"
+        },
+        "minimode": {
+          "position": "268, 0, 292, 15",
+          "image": "minimode.bmp"
+        },
+        "exit": {
+          "position": "292, 0, 316, 15",
+          "image": "close.bmp"
+        },
+        "progress": {
+          "position": "11, 122, 317, 131",
+          "bar_image": "",
+          "thumb_image": "progress_thumb.bmp",
+          "fill_image": "progress_fill.bmp"
+        },
+        "volume": {
+          "position": "253, 98, 309, 106",
+          "vertical": "false",
+          "bar_image": "",
+          "thumb_image": "volume_thumb.bmp",
+          "fill_image": "volume_fill.bmp"
+        },
+        "visual": {
+          "position": "19, 57, 85, 76"
+        },
+        "icon": {
+          "position": "14, 11, 30, 27"
+        },
+        "info": {
+          "position": "19, 40, 309, 52",
+          "color": "#ffffff",
+          "font": "simsong",
+          "font_size": "12",
+          "align": "left"
+        },
+        "led": {
+          "position": "100, 57, 170, 76",
+          "image": "number.bmp",
+          "align": "left"
+        },
+        "stereo": {
+          "position": "273, 64, 309, 76",
+          "color": "#10d7ff",
+          "font": "simsong",
+          "font_size": "12",
+          "align": "right"
+        },
+        "status": {
+          "position": "202, 64, 262, 76",
+          "color": "#a0a0a0",
+          "font": "simsong",
+          "font_size": "12",
+          "align": "left"
+        }
+      },
+      "bitmap_size": [
+        328,
+        135
+      ]
+    },
+    "lyric_window": {
+      "position": "328, 0, 656, 135",
+      "resize_rect": "17, 23, 311, 125",
+      "image": "lyric_skin.bmp",
+      "elements": {
+        "mini_border": {
+          "left_top_color": "#20627a",
+          "right_bottom_color": "#20627a"
+        },
+        "close": {
+          "position": "292, 0, 316, 15",
+          "image": "close.bmp",
+          "align": "right"
+        },
+        "ontop": {
+          "position": "267, 0, 292, 15",
+          "image": "ontop.bmp",
+          "align": "right"
+        },
+        "title": {
+          "position": "13, 5, 87, 18",
+          "image": "lyric_title.bmp",
+          "align": "left"
+        },
+        "lyric": {
+          "position": "10, 24, 318, 125"
+        }
+      },
+      "bitmap_size": [
+        328,
+        135
+      ]
+    },
+    "equalizer_window": {
+      "position": "328, 135, 656, 270",
+      "image": "equalizer_skin.bmp",
+      "eq_interval": "17",
+      "elements": {
+        "close": {
+          "position": "290, 0, 316, 15",
+          "image": "close2.bmp",
+          "align": "right"
+        },
+        "enabled": {
+          "position": "18, 25, 36, 42",
+          "image": "eq_enabled.bmp"
+        },
+        "profile": {
+          "position": "46, 25, 64, 42",
+          "image": "eq_profile.bmp"
+        },
+        "reset": {
+          "position": "74, 25, 92, 42",
+          "image": "eq_reset.bmp"
+        },
+        "balance": {
+          "position": "115, 30, 204, 38",
+          "thumb_image": "eq_thumb.bmp",
+          "bar_image": "",
+          "fill_image": "eq_fill.bmp"
+        },
+        "surround": {
+          "position": "222, 30, 311, 38",
+          "thumb_image": "eq_thumb.bmp",
+          "bar_image": "",
+          "fill_image": "eq_fill.bmp"
+        },
+        "preamp": {
+          "position": "22, 52, 29, 118",
+          "thumb_image": "thumb.bmp",
+          "bar_image": "",
+          "fill_image": ""
+        },
+        "eqfactor": {
+          "position": "86, 52, 93, 118",
+          "thumb_image": "thumb.bmp",
+          "bar_image": "",
+          "fill_image": ""
+        }
+      },
+      "bitmap_size": [
+        328,
+        135
+      ]
+    },
+    "mini_window": {
+      "image": "mini_skin.bmp",
+      "elements": {
+        "play": {
+          "position": "72, 6, 92, 26",
+          "image": "mini_play.bmp"
+        },
+        "pause": {
+          "position": "72, 6, 92, 26",
+          "image": "mini_pause.bmp"
+        },
+        "stop": {
+          "position": "25, 9, 41, 23",
+          "image": "mini_stop.bmp"
+        },
+        "prev": {
+          "position": "43, 10, 69, 23",
+          "image": "mini_prev.bmp"
+        },
+        "next": {
+          "position": "96, 10, 122, 23",
+          "image": "mini_next.bmp"
+        },
+        "mute": {
+          "position": "125, 9, 141, 23",
+          "image": "mini_mute.bmp"
+        },
+        "visual": {
+          "position": "149, 5, 185, 27"
+        },
+        "exit": {
+          "position": "200, 5, 212, 15",
+          "image": "mini_close.bmp"
+        },
+        "minimize": {
+          "position": "188, 5, 200, 15",
+          "image": "mini_minimize.bmp"
+        },
+        "minimode": {
+          "position": "188, 16, 200, 26",
+          "image": "mini_normal.bmp"
+        },
+        "lyric": {
+          "position": "200, 16, 212, 26",
+          "image": "mini_ontop.bmp"
+        },
+        "icon": {
+          "position": "4, 8, 20, 24"
+        }
+      },
+      "bitmap_size": [
+        219,
+        32
+      ]
+    },
+    "playlist_window": {
+      "position": "0, 135, 328, 270",
+      "resize_rect": "10, 52, 318, 125",
+      "image": "playlist_skin.bmp",
+      "elements": {
+        "close": {
+          "position": "290, 0, 316, 15",
+          "image": "close2.bmp",
+          "align": "right"
+        },
+        "title": {
+          "position": "13, 5, 119, 18",
+          "image": "playlist_title.bmp",
+          "align": "left"
+        },
+        "toolbar": {
+          "position": "17, 27, 311, 40",
+          "image": "playlist_toolbar.bmp",
+          "align": "top"
+        },
+        "scrollbar": {
+          "buttons_image": "scrollbar_button.bmp",
+          "thumb_image": "scrollbar_thumb.bmp",
+          "bar_image": "scrollbar_bar.bmp",
+          "thumb_resize_center": "0"
+        },
+        "playlist": {
+          "position": "10, 52, 318, 125"
+        }
+      },
+      "bitmap_size": [
+        328,
+        135
+      ]
+    }
+  },
+  "assets": {
+    "player_skin.bmp": {
+      "file": "player_skin.png",
+      "size": [
+        328,
+        135
+      ]
+    },
+    "play.bmp": {
+      "file": "play.png",
+      "size": [
+        112,
+        28
+      ]
+    },
+    "pause.bmp": {
+      "file": "pause.png",
+      "size": [
+        112,
+        28
+      ]
+    },
+    "stop.bmp": {
+      "file": "stop.png",
+      "size": [
+        76,
+        15
+      ]
+    },
+    "prev.bmp": {
+      "file": "prev.png",
+      "size": [
+        156,
+        15
+      ]
+    },
+    "next.bmp": {
+      "file": "next.png",
+      "size": [
+        156,
+        15
+      ]
+    },
+    "mute.bmp": {
+      "file": "mute.png",
+      "size": [
+        84,
+        19
+      ]
+    },
+    "open.bmp": {
+      "file": "open.png",
+      "size": [
+        80,
+        15
+      ]
+    },
+    "lyric.bmp": {
+      "file": "lyric.png",
+      "size": [
+        28,
+        7
+      ]
+    },
+    "equalizer.bmp": {
+      "file": "equalizer.png",
+      "size": [
+        28,
+        7
+      ]
+    },
+    "playlist.bmp": {
+      "file": "playlist.png",
+      "size": [
+        28,
+        7
+      ]
+    },
+    "minimize.bmp": {
+      "file": "minimize.png",
+      "size": [
+        96,
+        15
+      ]
+    },
+    "minimode.bmp": {
+      "file": "minimode.png",
+      "size": [
+        96,
+        15
+      ]
+    },
+    "close.bmp": {
+      "file": "close.png",
+      "size": [
+        96,
+        15
+      ]
+    },
+    "progress_thumb.bmp": {
+      "file": "progress_thumb.png",
+      "size": [
+        64,
+        9
+      ]
+    },
+    "progress_fill.bmp": {
+      "file": "progress_fill.png",
+      "size": [
+        304,
+        2
+      ]
+    },
+    "volume_thumb.bmp": {
+      "file": "volume_thumb.png",
+      "size": [
+        32,
+        8
+      ]
+    },
+    "volume_fill.bmp": {
+      "file": "volume_fill.png",
+      "size": [
+        54,
+        2
+      ]
+    },
+    "number.bmp": {
+      "file": "number.png",
+      "size": [
+        168,
+        19
+      ]
+    },
+    "lyric_skin.bmp": {
+      "file": "lyric_skin.png",
+      "size": [
+        328,
+        135
+      ]
+    },
+    "ontop.bmp": {
+      "file": "ontop.png",
+      "size": [
+        100,
+        15
+      ]
+    },
+    "lyric_title.bmp": {
+      "file": "lyric_title.png",
+      "size": [
+        74,
+        13
+      ]
+    },
+    "equalizer_skin.bmp": {
+      "file": "equalizer_skin.png",
+      "size": [
+        328,
+        135
+      ]
+    },
+    "close2.bmp": {
+      "file": "close2.png",
+      "size": [
+        104,
+        15
+      ]
+    },
+    "eq_enabled.bmp": {
+      "file": "eq_enabled.png",
+      "size": [
+        72,
+        17
+      ]
+    },
+    "eq_profile.bmp": {
+      "file": "eq_profile.png",
+      "size": [
+        72,
+        17
+      ]
+    },
+    "eq_reset.bmp": {
+      "file": "eq_reset.png",
+      "size": [
+        72,
+        17
+      ]
+    },
+    "eq_thumb.bmp": {
+      "file": "eq_thumb.png",
+      "size": [
+        32,
+        8
+      ]
+    },
+    "eq_fill.bmp": {
+      "file": "eq_fill.png",
+      "size": [
+        81,
+        2
+      ]
+    },
+    "thumb.bmp": {
+      "file": "thumb.png",
+      "size": [
+        28,
+        12
+      ]
+    },
+    "mini_skin.bmp": {
+      "file": "mini_skin.png",
+      "size": [
+        219,
+        32
+      ]
+    },
+    "mini_play.bmp": {
+      "file": "mini_play.png",
+      "size": [
+        80,
+        20
+      ]
+    },
+    "mini_pause.bmp": {
+      "file": "mini_pause.png",
+      "size": [
+        80,
+        20
+      ]
+    },
+    "mini_stop.bmp": {
+      "file": "mini_stop.png",
+      "size": [
+        64,
+        14
+      ]
+    },
+    "mini_prev.bmp": {
+      "file": "mini_prev.png",
+      "size": [
+        104,
+        13
+      ]
+    },
+    "mini_next.bmp": {
+      "file": "mini_next.png",
+      "size": [
+        104,
+        13
+      ]
+    },
+    "mini_mute.bmp": {
+      "file": "mini_mute.png",
+      "size": [
+        64,
+        14
+      ]
+    },
+    "mini_close.bmp": {
+      "file": "mini_close.png",
+      "size": [
+        48,
+        10
+      ]
+    },
+    "mini_minimize.bmp": {
+      "file": "mini_minimize.png",
+      "size": [
+        48,
+        10
+      ]
+    },
+    "mini_normal.bmp": {
+      "file": "mini_normal.png",
+      "size": [
+        48,
+        10
+      ]
+    },
+    "mini_ontop.bmp": {
+      "file": "mini_ontop.png",
+      "size": [
+        48,
+        10
+      ]
+    },
+    "playlist_skin.bmp": {
+      "file": "playlist_skin.png",
+      "size": [
+        328,
+        135
+      ]
+    },
+    "playlist_title.bmp": {
+      "file": "playlist_title.png",
+      "size": [
+        106,
+        13
+      ]
+    },
+    "playlist_toolbar.bmp": {
+      "file": "playlist_toolbar.png",
+      "size": [
+        294,
+        11
+      ]
+    },
+    "scrollbar_button.bmp": {
+      "file": "scrollbar_button.png",
+      "size": [
+        51,
+        32
+      ]
+    },
+    "scrollbar_thumb.bmp": {
+      "file": "scrollbar_thumb.png",
+      "size": [
+        51,
+        29
+      ]
+    },
+    "scrollbar_bar.bmp": {
+      "file": "scrollbar_bar.png",
+      "size": [
+        17,
+        2
+      ]
+    }
+  }
+}

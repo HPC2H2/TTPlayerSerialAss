@@ -1,0 +1,587 @@
+{
+  "source": "E:\\ttplayer-cpp\\【千千静听 Skin】皮肤 ★\\1 怀旧+\\4、HiFi 3.1.skn",
+  "windows": {
+    "player_window": {
+      "image": "player_skin.bmp",
+      "elements": {
+        "play": {
+          "position": "57, 91, 79, 105",
+          "image": "play.bmp"
+        },
+        "pause": {
+          "position": "57, 91, 79, 105",
+          "image": "pause.bmp"
+        },
+        "stop": {
+          "position": "34, 90, 56, 105",
+          "image": "stop.bmp"
+        },
+        "prev": {
+          "position": "11, 89, 33, 103",
+          "image": "prev.bmp"
+        },
+        "next": {
+          "position": "80, 91, 102, 105",
+          "image": "next.bmp"
+        },
+        "mute": {
+          "position": "103, 91, 125, 105",
+          "image": "mute.bmp"
+        },
+        "open": {
+          "position": "126, 91, 148, 105",
+          "image": "open.bmp"
+        },
+        "lyric": {
+          "position": "214, 94, 232, 105",
+          "image": "lyric.bmp"
+        },
+        "equalizer": {
+          "position": "164, 94, 182, 105",
+          "image": "equalizer.bmp"
+        },
+        "playlist": {
+          "position": "189, 94, 207, 105",
+          "image": "playlist.bmp"
+        },
+        "minimize": {
+          "position": "239, 4, 248, 11",
+          "image": "minimize.bmp"
+        },
+        "minimode": {
+          "position": "250, 4, 259, 11",
+          "image": "minimode.bmp"
+        },
+        "exit": {
+          "position": "261, 4, 270, 11",
+          "image": "exit.bmp"
+        },
+        "progress": {
+          "position": "17, 75, 263, 81",
+          "bar_image": "",
+          "thumb_image": "progress_thumb.bmp"
+        },
+        "volume": {
+          "position": "134, 59, 203, 72",
+          "vertical": "false",
+          "bar_image": "",
+          "thumb_image": "volume_thumb.bmp",
+          "fill_image": "volume_fill.bmp"
+        },
+        "visual": {
+          "position": "24, 26, 99, 59"
+        },
+        "icon": {
+          "position": "3, 3, 19, 19"
+        },
+        "info": {
+          "position": "112, 26, 258, 38",
+          "color": "#ffff06",
+          "bkgnd": "#011f1c",
+          "font": "SimSun",
+          "font_size": "12"
+        },
+        "led": {
+          "position": "134, 42, 179, 55",
+          "image": "number.bmp",
+          "align": "right"
+        },
+        "stereo": {
+          "position": "214, 59, 258, 71",
+          "color": "#00ffff",
+          "bkgnd": "#011f1c",
+          "font": "SimSun",
+          "font_size": "12",
+          "align": "right"
+        },
+        "status": {
+          "position": "196, 43, 258, 55",
+          "color": "#00ffff",
+          "bkgnd": "#011f1c",
+          "font": "SimSun",
+          "font_size": "12",
+          "align": "right"
+        }
+      },
+      "bitmap_size": [
+        275,
+        116
+      ]
+    },
+    "mini_window": {
+      "image": "mini_skin.bmp",
+      "elements": {
+        "play": {
+          "position": "115, 8, 128, 17",
+          "image": "mini_play.bmp"
+        },
+        "pause": {
+          "position": "115, 8, 128, 17",
+          "image": "mini_pause.bmp"
+        },
+        "stop": {
+          "position": "100, 8, 113, 17",
+          "image": "mini_stop.bmp"
+        },
+        "prev": {
+          "position": "85, 8, 98, 17",
+          "image": "mini_prev.bmp"
+        },
+        "next": {
+          "position": "130, 8, 144, 17",
+          "image": "mini_next.bmp"
+        },
+        "mute": {
+          "position": "145, 8, 158, 17",
+          "image": "mini_mute.bmp"
+        },
+        "exit": {
+          "position": "219, 4, 228, 11",
+          "image": "exit.bmp"
+        },
+        "minimize": {
+          "position": "208, 4, 217, 11",
+          "image": "minimize.bmp"
+        },
+        "minimode": {
+          "position": "219, 14, 228, 21",
+          "image": "mini_normal.bmp"
+        },
+        "lyric": {
+          "position": "208, 14, 217, 21",
+          "image": "mini_lyric.bmp"
+        },
+        "visual": {
+          "position": "163, 4, 202, 21"
+        },
+        "icon": {
+          "position": "4, 3, 20, 19"
+        }
+      },
+      "bitmap_size": [
+        232,
+        25
+      ]
+    },
+    "lyric_window": {
+      "position": "275, 0, 550, 372",
+      "resize_rect": "10, 16, 120, 24",
+      "image": "lyric_skin.bmp",
+      "elements": {
+        "title": {
+          "position": "0, 4, 32, 11",
+          "image": "lyric_title.bmp",
+          "align": "center"
+        },
+        "close": {
+          "position": "143, 4, 152, 11",
+          "image": "exit.bmp",
+          "align": "right"
+        },
+        "ontop": {
+          "position": "132, 4, 141, 11",
+          "image": "ontop.bmp",
+          "align": "right"
+        },
+        "lyric": {
+          "position": "8, 14, 150, 27"
+        }
+      },
+      "bitmap_size": [
+        157,
+        34
+      ]
+    },
+    "equalizer_window": {
+      "position": "0, 116, 275, 232",
+      "image": "equalizer_skin.bmp",
+      "eq_interval": "5",
+      "elements": {
+        "title": {
+          "position": "10, 4, 69, 11",
+          "image": "equalizer_title.bmp"
+        },
+        "close": {
+          "position": "261, 4, 270, 11",
+          "image": "exit.bmp",
+          "align": "right"
+        },
+        "enabled": {
+          "position": "13, 18, 33, 31",
+          "image": "eq_enabled.bmp"
+        },
+        "profile": {
+          "position": "39, 18, 63, 31",
+          "image": "eq_profile.bmp"
+        },
+        "reset": {
+          "position": "57, 18, 81, 31",
+          "image": "eq_reset.bmp"
+        },
+        "balance": {
+          "position": "206, 24, 245, 31",
+          "thumb_image": "eq_balance.bmp",
+          "bar_image": ""
+        },
+        "surround": {
+          "position": "206, 9, 245, 16",
+          "thumb_image": "eq_balance.bmp",
+          "bar_image": ""
+        },
+        "preamp": {
+          "position": "21, 39, 34, 101",
+          "thumb_image": "eq_thumb.bmp",
+          "bar_image": "",
+          "fill_image": "eq_fill.bmp"
+        },
+        "eqfactor": {
+          "position": "78, 39, 91, 101",
+          "thumb_image": "eq_thumb.bmp",
+          "bar_image": "",
+          "fill_image": "eq_fill.bmp"
+        }
+      },
+      "bitmap_size": [
+        275,
+        116
+      ]
+    },
+    "playlist_window": {
+      "position": "0, 232, 275, 372",
+      "resize_rect": "35, 52, 240, 75",
+      "image": "playlist_skin.bmp",
+      "elements": {
+        "title": {
+          "position": "0, 4, 59, 11",
+          "image": "playlist_title.bmp",
+          "align": "center"
+        },
+        "close": {
+          "position": "261, 4, 270, 11",
+          "image": "exit.bmp",
+          "align": "right"
+        },
+        "toolbar": {
+          "position": "10, 16, 264, 36",
+          "align": "top+left"
+        },
+        "scrollbar": {
+          "buttons_image": "scrollbar_button.bmp",
+          "thumb_image": "scrollbar_thumb.bmp",
+          "bar_image": "scrollbar_bar.bmp",
+          "thumb_resize_center": "8"
+        },
+        "playlist": {
+          "position": "15, 44, 260, 78"
+        }
+      },
+      "bitmap_size": [
+        275,
+        91
+      ]
+    }
+  },
+  "assets": {
+    "player_skin.bmp": {
+      "file": "player_skin.png",
+      "size": [
+        275,
+        116
+      ]
+    },
+    "play.bmp": {
+      "file": "play.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "pause.bmp": {
+      "file": "pause.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "stop.bmp": {
+      "file": "stop.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "prev.bmp": {
+      "file": "prev.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "next.bmp": {
+      "file": "next.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "mute.bmp": {
+      "file": "mute.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "open.bmp": {
+      "file": "open.png",
+      "size": [
+        88,
+        14
+      ]
+    },
+    "lyric.bmp": {
+      "file": "lyric.png",
+      "size": [
+        72,
+        11
+      ]
+    },
+    "equalizer.bmp": {
+      "file": "equalizer.png",
+      "size": [
+        72,
+        11
+      ]
+    },
+    "playlist.bmp": {
+      "file": "playlist.png",
+      "size": [
+        72,
+        11
+      ]
+    },
+    "minimize.bmp": {
+      "file": "minimize.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "minimode.bmp": {
+      "file": "minimode.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "exit.bmp": {
+      "file": "exit.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "progress_thumb.bmp": {
+      "file": "progress_thumb.png",
+      "size": [
+        116,
+        7
+      ]
+    },
+    "volume_thumb.bmp": {
+      "file": "volume_thumb.png",
+      "size": [
+        28,
+        13
+      ]
+    },
+    "volume_fill.bmp": {
+      "file": "volume_fill.png",
+      "size": [
+        69,
+        13
+      ]
+    },
+    "number.bmp": {
+      "file": "number.png",
+      "size": [
+        108,
+        13
+      ]
+    },
+    "mini_skin.bmp": {
+      "file": "mini_skin.png",
+      "size": [
+        232,
+        25
+      ]
+    },
+    "mini_play.bmp": {
+      "file": "mini_play.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_pause.bmp": {
+      "file": "mini_pause.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_stop.bmp": {
+      "file": "mini_stop.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_prev.bmp": {
+      "file": "mini_prev.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_next.bmp": {
+      "file": "mini_next.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_mute.bmp": {
+      "file": "mini_mute.png",
+      "size": [
+        52,
+        9
+      ]
+    },
+    "mini_normal.bmp": {
+      "file": "mini_normal.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "mini_lyric.bmp": {
+      "file": "mini_lyric.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "lyric_skin.bmp": {
+      "file": "lyric_skin.png",
+      "size": [
+        157,
+        34
+      ]
+    },
+    "lyric_title.bmp": {
+      "file": "lyric_title.png",
+      "size": [
+        32,
+        7
+      ]
+    },
+    "ontop.bmp": {
+      "file": "ontop.png",
+      "size": [
+        36,
+        7
+      ]
+    },
+    "equalizer_skin.bmp": {
+      "file": "equalizer_skin.png",
+      "size": [
+        275,
+        116
+      ]
+    },
+    "equalizer_title.bmp": {
+      "file": "equalizer_title.png",
+      "size": [
+        59,
+        7
+      ]
+    },
+    "eq_enabled.bmp": {
+      "file": "eq_enabled.png",
+      "size": [
+        80,
+        13
+      ]
+    },
+    "eq_profile.bmp": {
+      "file": "eq_profile.png",
+      "size": [
+        48,
+        13
+      ]
+    },
+    "eq_reset.bmp": {
+      "file": "eq_reset.png",
+      "size": [
+        48,
+        13
+      ]
+    },
+    "eq_balance.bmp": {
+      "file": "eq_balance.png",
+      "size": [
+        44,
+        7
+      ]
+    },
+    "eq_thumb.bmp": {
+      "file": "eq_thumb.png",
+      "size": [
+        56,
+        7
+      ]
+    },
+    "eq_fill.bmp": {
+      "file": "eq_fill.png",
+      "size": [
+        14,
+        63
+      ]
+    },
+    "playlist_skin.bmp": {
+      "file": "playlist_skin.png",
+      "size": [
+        275,
+        91
+      ]
+    },
+    "playlist_title.bmp": {
+      "file": "playlist_title.png",
+      "size": [
+        52,
+        7
+      ]
+    },
+    "scrollbar_button.bmp": {
+      "file": "scrollbar_button.png",
+      "size": [
+        21,
+        8
+      ]
+    },
+    "scrollbar_thumb.bmp": {
+      "file": "scrollbar_thumb.png",
+      "size": [
+        21,
+        11
+      ]
+    },
+    "scrollbar_bar.bmp": {
+      "file": "scrollbar_bar.png",
+      "size": [
+        7,
+        6
+      ]
+    }
+  }
+}

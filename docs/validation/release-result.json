@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "runtimeDirectory": "E:\\TTPlayerSerialAss\\publish\\win-x64\\",
+  "runtime": "10.0.9",
+  "points": 6080,
+  "rx": 176373,
+  "tx": 10,
+  "availablePorts": [],
+  "skins": 69,
+  "decodedSkins": 69,
+  "checks": [
+    "demo receive",
+    "freeze keeps acquiring",
+    "TX echo",
+    "record flush",
+    "CSV export",
+    "PNG render",
+    "three skin layouts",
+    "preset selects without TX",
+    "periodic start/stop",
+    "all skin sprites decode",
+    "disconnect"
+  ]
+}
