@@ -2,6 +2,22 @@
 
 C# / .NET 10 / WPF 实现的桌面串口工具。主面板使用千千静听原版 `.skn` 图片与控件坐标，收发、数值波形和通道窗口采用配套主题。经典、iBlue、HiFi 3.1 已做界面检查；另有 66 款皮肤通过格式解析和主窗口图片解码检查。
 
+## 界面预览
+
+以下为应用实际控件的渲染截图，波形使用四通道模拟 ADC 数据。
+
+**经典皮肤**
+
+![经典皮肤：串口收发、四通道波形和通道控制](docs/validation/classic.png)
+
+**iBlue**
+
+![iBlue 皮肤：蓝色主面板与配套波形界面](docs/validation/iblue.png)
+
+**HiFi 3.1**
+
+![HiFi 3.1 皮肤：复古主面板与绿色波形界面](docs/validation/hifi.png)
+
 ## 运行
 
 双击根目录的 **启动千千串口助手.cmd**，或运行 `publish\win-x64\TTPlayerSerialAss.exe`。发布目录为 Windows x64 自包含便携版，复制整个目录即可使用；不要只复制 EXE。
@@ -10,7 +26,7 @@ C# / .NET 10 / WPF 实现的桌面串口工具。主面板使用千千静听原�
 2. 接设备时点击 **串口设置**，选择 COM 口、波特率、数据位、校验、停止位与流控，点击应用，再点击 **开始监视**。切换端口或波特率前先断开。
 3. 输入文本或 HEX，选择换行方式，点击发送。`Ctrl+Enter` 也可发送。HEX 直接发送输入的字节，不追加换行。
 4. 周期发送使用勾选时的内容快照，修改内容后需重新勾选；周期最小 20 ms。断开或发生串口错误会停止周期发送。
-5. 点击皮肤下拉框切换皮肤，或导入 / 拖入 `.skn`。导入文件复制到用户配置目录，不修改原始皮肤。
+5. 点击皮肤下拉框切换皮肤，或导入 / 拖入 `.skn`。导入文件复制到应用配置目录，不修改原始皮肤。
 
 `GET_STATUS`、`READ_ADC`、`SET_RATE 1000` 是可编辑的预设示例，具体命令需与单片机固件一致。选择预设不会自动发送。
 
@@ -76,11 +92,11 @@ printf("%u,%u,%u,%u\r\n", adc[0], adc[1], adc[2], adc[3]);
 
 ```powershell
 dotnet build TTPlayerSerialAss.sln -c Release
-dotnet run --project tests/TTSerial.Tests -c Release -- E:\TTPlayerSerialAss
+dotnet run --project tests/TTSerial.Tests -c Release -- .
 dotnet run --project src/TTSerial.App
 ```
 
-运行 `tools\build.ps1` 生成便携版；运行 `tools\verify.ps1` 执行逻辑测试和 WPF 演示 / 图片检查。WPF 检查在后台执行，不读写正常用户配置，不打开实体串口。
+以上命令在仓库根目录执行。运行 `tools\build.ps1` 生成便携版；运行 `tools\verify.ps1` 执行逻辑测试和 WPF 演示 / 图片检查。WPF 检查在后台执行，使用独立测试配置，不打开实体串口。
 
 | 文件 / 项目 | 适合学习的内容 |
 | --- | --- |
@@ -102,4 +118,4 @@ dotnet run --project src/TTSerial.App
 
 首版保留原版主面板图片与按钮，辅助面板使用匹配主题的 WPF 布局。其余皮肤属于通用适配，尚未逐款精调；未实现原版所有辅助窗体的九宫格、磁性吸附、系统托盘、触发、双游标、FFT、二进制帧协议和录制回放。
 
-本地皮肤从用户现有的 `E:\ttplayer-cpp` 复制，作者信息保留在原始包中，详见 `resources\skins\来源说明.md`。
+收录的原版千千静听皮肤保留原始素材和作者信息。各皮肤的名称、作者及来源信息可在原始包的 `Skin.xml` 中查看。
